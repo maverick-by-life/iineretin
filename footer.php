@@ -1,7 +1,7 @@
 <?php
 if (!is_404()) { ?>
 	<footer></footer>
-	<div class="privacy-popup">
+	<div class="privacy-popup hide">
 		<p>При работе с сайтом Вы даете согласие на обработку персональных данных, использование хранилища...</p>
 		<div class="privacy-popup__btns">
 			<a class="btn" href="<?php the_permalink(3) ?>">Прочитать все</a>

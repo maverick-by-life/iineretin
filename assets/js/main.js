@@ -36,8 +36,8 @@ if (questions.length > 0) {
 const agreeBtn = document.querySelector('.agree');
 const popup = document.querySelector('.privacy-popup');
 
-if (localStorage.getItem('agree') && popup) {
-  popup.classList.add('hide');
+if (!localStorage.getItem('agree') && popup) {
+  popup.classList.remove('hide');
 }
 
 if (popup) {
