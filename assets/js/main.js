@@ -46,3 +46,9 @@ if (popup) {
     popup.classList.add('hide');
   });
 }
+
+//inputmask
+const phone = document.querySelector('input[name="your-phone"]');
+if (phone) {
+  Inputmask('+7 (999) 999-99-99').mask(phone);
+}
