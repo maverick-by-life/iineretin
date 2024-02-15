@@ -47,8 +47,11 @@ if (popup) {
   });
 }
 
-//inputmask
-const phone = document.querySelector('input[name="your-phone"]');
-if (phone) {
-  Inputmask('+7 (999) 999-99-99').mask(phone);
+// autocomplete="off"
+const customFormInputs = document.querySelectorAll('.custom-form input');
+
+if (customFormInputs.length > 0) {
+  customFormInputs.forEach((input) => {
+    input.setAttribute('autocomplete', 'off');
+  });
 }

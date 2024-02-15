@@ -3,7 +3,6 @@
 function iineretin_enqueue_scripts()
 {
 	wp_enqueue_style("iineretin-style", get_template_directory_uri() . "/assets/css/style.css", array(), "1.0", "all");
-	wp_enqueue_script("iineretin-inputmask", get_template_directory_uri() . "/assets/js/inputmask.min.js", array('jquery'), "1.0", true);
 	wp_enqueue_script("iineretin-script", get_template_directory_uri() . "/assets/js/main.js", array('jquery'), "1.0", true);
 };
 add_action("wp_enqueue_scripts", "iineretin_enqueue_scripts");
@@ -32,7 +31,7 @@ function iineretin_register_post_type()
 			'add_new_item' => 'Добавить новость',
 			'edit_item' => 'Редактировать новость',
 			'new_item' => 'Свежая новость',
-			'all_items' => 'Все новости',
+			'all_items' => 'Новости',
 			'menu_name' => 'Мои новости'
 		),
 		'supports' => ['title', 'editor', 'thumbnail'],
@@ -58,7 +57,7 @@ function iineretin_register_post_type()
 			'add_new_item' => 'Добавить методику',
 			'edit_item' => 'Редактировать методику',
 			'new_item' => 'Свежая методика',
-			'all_items' => 'Все методики',
+			'all_items' => 'Методики',
 			'menu_name' => 'Метод разработки'
 		),
 		'supports' => ['title', 'editor', 'thumbnail'],
@@ -73,6 +72,32 @@ function iineretin_register_post_type()
 		'menu_icon' => 'dashicons-beer',
 	);
 	register_post_type('methodical', $args);
+
+	unset($args);
+	$args = array(
+		'label' => esc_html__('Опросы', 'iineretin'),
+		'labels' => array(
+			'name' => 'Опросы',
+			'singular_name' => 'Опрос',
+			'add_new' => 'Добавить опрос',
+			'add_new_item' => 'Добавить опрос',
+			'edit_item' => 'Редактировать опрос',
+			'new_item' => 'Новый опрос',
+			'all_items' => 'Опросы',
+			'menu_name' => 'Опросы'
+		),
+		'supports' => ['title', 'editor', 'thumbnail'],
+		'public' => true,
+		'public_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'has_archive' => true,
+		'rewrite' => ['slug' => 'quizzes'],
+		'show_in_rest' => true,
+		'menu_position' => 22,
+		'menu_icon' => 'dashicons-pets',
+	);
+	register_post_type('quiz', $args);
 };
 add_action('init', 'iineretin_register_post_type');
 

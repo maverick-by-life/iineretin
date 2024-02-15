@@ -41,9 +41,9 @@
 					?>
 				</ul>
 			</aside>
-			<button class="show-menu-btn" type="button">
-				<img class="burger" src="<?php bloginfo('template_url') ?>/assets/img/burger.svg" alt="">
-				<img class="close" src="<?php bloginfo('template_url') ?>/assets/img/close.svg" alt="">
+			<button class="show-menu-btn" type="button" title="показать/скрыть меню">
+				<img class="burger" src="<?php bloginfo('template_url') ?>/assets/img/burger.svg" alt="показать меню">
+				<img class="close" src="<?php bloginfo('template_url') ?>/assets/img/close.svg" alt="скрыть меню">
 			</button>
 		</header>
 	<?php	} ?>

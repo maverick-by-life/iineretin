@@ -6,7 +6,7 @@
 			<?php if (is_post_type_archive('novelty')) {
 				get_template_part('partials/news-item');
 			} else {
-				get_template_part('partials/methodic-item');
+				get_template_part('partials/methodic_quiz-item');
 			} ?>
 		</ul>
 		<?php get_template_part('partials/pagination'); ?>

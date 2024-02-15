@@ -27,6 +27,6 @@
 			<h2>Форма связи</h2>
 			<span></span>
 		</div>
-		<?php echo do_shortcode('[contact-form-7 id="cdc81f4" title="feedback"]') ?>
+		<?php echo do_shortcode('[wpforms id="121"]') ?>
 	</div>
 </div>

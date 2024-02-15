@@ -12,7 +12,7 @@ get_header(); ?>
 					the_row(); ?>
 					<li class="questions__item">
 						<img src="<?php bloginfo('template_url'); ?>/assets/img/question_icon.png" alt="вопрос">
-						<h3><?php the_sub_field('question'); ?></h3>
+						<h2><?php the_sub_field('question'); ?></h2>
 						<span class="questions__icon">+</span>
 						<p class="questions__content-box"><?php the_sub_field('response'); ?></p>
 					</li>
