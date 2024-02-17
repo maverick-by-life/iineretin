@@ -722,7 +722,7 @@ main::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 .custom-form.wpforms-container-full.completed button[type='submit'].btn.ml {
-  background: var(--color-grey-white);
+  display: none;
 }
 
 .custom-form.wpforms-container-full .wpforms-field-label,
@@ -1037,7 +1037,8 @@ main::-webkit-scrollbar-thumb {
   row-gap: 35px;
 }
 
-.posts-list .wrapper > div {
+.posts-list .wrapper > div,
+.posts-list .wrapper > p:not(:first-of-type){
   display: none;
 }
 
