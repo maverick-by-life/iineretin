@@ -5,7 +5,7 @@
 					<?php the_post_thumbnail() ?>
 				</div>
 				<div class="page__info">
-					<h2><?php echo get_the_title($post) ?></h2>
+					<h2><?php echo get_the_title() ?></h2>
 					<?php the_content() ?>
 					<span> <?php the_date('j F Y'); ?> г.</span>
 				</div>
